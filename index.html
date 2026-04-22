@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GoodGolf Draw</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="GoodGolf Draw home">
+        <span class="brand-mark">GG</span>
+        <span>GoodGolf Draw</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <a href="#play">Play</a>
+        <a href="#draws">Draws</a>
+      </nav>
+      <a class="header-action" href="signup.html">Join</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/hero-impact.png" alt="Community golf charity moment" />
+        <div class="hero-scrim"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Subscription golf scores. Monthly prizes. Real charity impact.</p>
+          <h1 id="hero-title">GoodGolf Draw</h1>
+          <p class="hero-copy">
+            A mobile-first prize platform where every score entry helps fund causes players care about.
+          </p>
+          <div class="impact-strip" aria-label="Platform highlights">
+            <span><strong>10%</strong> minimum to charity</span>
+            <span><strong>5</strong> latest scores stored</span>
+            <span><strong>3</strong> prize tiers</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section app-band" id="signup" aria-labelledby="signup-title">
+        <div class="section-heading">
+          <p class="eyebrow">User Side</p>
+          <h2 id="signup-title">Signup, Subscription, Charity</h2>
+        </div>
+        <div class="signup-grid">
+          <form class="panel form-panel" id="signup-form">
+            <label>
+              Full name
+              <input name="name" value="Ava Morgan" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" value="ava@goodgolf.test" autocomplete="email" required />
+            </label>
+            <label>
+              Charity
+              <select name="charity" id="charity-select"></select>
+            </label>
+            <div class="segmented" role="group" aria-label="Subscription plan">
+              <button type="button" class="segment active" data-plan="Monthly">$12 monthly</button>
+              <button type="button" class="segment" data-plan="Yearly">$120 yearly</button>
+            </div>
+            <button class="button primary full" type="submit">Update Player</button>
+          </form>
+
+          <article class="panel impact-panel">
+            <div>
+              <p class="mini-label">Your selected cause</p>
+              <h3 id="selected-charity">First Tee Youth Access</h3>
+            </div>
+            <div class="impact-meter" aria-label="Charity allocation">
+              <span style="--value: 18%"></span>
+            </div>
+            <p class="impact-copy">
+              <strong id="charity-rate">18%</strong> of this player's subscription is routed to charity, above the required 10% minimum.
+            </p>
+            <div class="stat-row">
+              <span>Plan</span>
+              <strong id="selected-plan">Monthly</strong>
+            </div>
+            <div class="stat-row">
+              <span>Status</span>
+              <strong class="status-pill good">Active</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="play" aria-labelledby="play-title">
+        <div class="section-heading">
+          <p class="eyebrow">Score System</p>
+          <h2 id="play-title">Latest Five Score Entries</h2>
+        </div>
+        <div class="score-layout">
+          <form class="panel score-entry" id="score-form">
+            <label>
+              Score date
+              <input id="score-date" type="date" required />
+            </label>
+            <label>
+              Golf score
+              <input id="score-value" type="number" min="1" max="45" value="18" required />
+            </label>
+            <button class="button primary full" type="submit">Add Score</button>
+            <p class="form-message" id="score-message" role="status"></p>
+          </form>
+
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="mini-label">Stored scores</p>
+                <h3>Most Recent Only</h3>
+              </div>
+              <span class="counter" id="score-count">5/5</span>
+            </div>
+            <div class="score-list" id="score-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section draw-band" id="draws" aria-labelledby="draw-title">
+        <div class="section-heading">
+          <p class="eyebrow">Monthly Draw</p>
+          <h2 id="draw-title">Match Scores, Share Prizes</h2>
+        </div>
+        <div class="draw-grid">
+          <article class="panel draw-card">
+            <div class="panel-head">
+              <div>
+                <p class="mini-label">April 2026 pool</p>
+                <h3>$84,000</h3>
+              </div>
+              <button class="icon-button" id="run-draw" type="button" aria-label="Run monthly draw">Run</button>
+            </div>
+            <div class="draw-numbers" id="draw-numbers"></div>
+            <div class="draw-result" id="draw-result"></div>
+          </article>
+
+          <article class="panel prize-card">
+            <div class="prize-line jackpot">
+              <span>5 match jackpot</span>
+              <strong>40%</strong>
+            </div>
+            <div class="prize-line">
+              <span>4 match winners</span>
+              <strong>35%</strong>
+            </div>
+            <div class="prize-line">
+              <span>3 match winners</span>
+              <strong>25%</strong>
+            </div>
+            <p class="small-note">The jackpot rolls over when no player hits five matches.</p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <span>GoodGolf Draw prototype</span>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

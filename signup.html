@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signup | GoodGolf Draw</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <main class="auth-page">
+      <a class="brand auth-brand" href="index.html" aria-label="GoodGolf Draw home">
+        <span class="brand-mark">GG</span>
+        <span>GoodGolf Draw</span>
+      </a>
+      <section class="panel auth-card" aria-labelledby="signup-page-title">
+        <p class="eyebrow">Start playing</p>
+        <h1 id="signup-page-title">Signup</h1>
+        <form class="form-panel">
+          <label>
+            Full name
+            <input value="Ava Morgan" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" value="ava@goodgolf.test" autocomplete="email" required />
+          </label>
+          <label>
+            Password
+            <input type="password" value="password123" autocomplete="new-password" required />
+          </label>
+          <label>
+            Select charity
+            <select required>
+              <option>First Tee Youth Access</option>
+              <option>Hospice Family Fund</option>
+              <option>Clean Water Rounds</option>
+              <option>Veterans Mobility Trust</option>
+            </select>
+          </label>
+          <div class="segmented" role="group" aria-label="Subscription plan">
+            <button type="button" class="segment active">$12 monthly</button>
+            <button type="button" class="segment">$120 yearly</button>
+          </div>
+          <button class="button primary full" type="submit">Create Account</button>
+        </form>
+        <p class="auth-switch">Already registered? <a href="login.html">Login</a></p>
+      </section>
+    </main>
+  </body>
+</html>

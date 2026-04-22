@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Player Dashboard | GoodGolf Draw</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="GoodGolf Draw home">
+        <span class="brand-mark">GG</span>
+        <span>GoodGolf Draw</span>
+      </a>
+      <nav class="top-nav" aria-label="Dashboard navigation">
+        <a href="#scores">Scores</a>
+        <a href="#draw">Draw</a>
+        <a href="#charity">Charity</a>
+        <a href="index.html#admin">Admin</a>
+      </nav>
+      <button class="header-action logout-button" id="logout-button" type="button">Logout</button>
+    </header>
+
+    <main>
+      <section class="dashboard-hero" aria-labelledby="dashboard-title">
+        <div class="dashboard-wrap">
+          <p class="eyebrow">Player dashboard</p>
+          <h1 id="dashboard-title">Welcome back, Ava</h1>
+          <p class="hero-copy">Your subscription is active, your charity is selected, and your latest five scores are ready for the monthly draw.</p>
+          <div class="dashboard-stats">
+            <article class="panel stat-card">
+              <span>Subscription</span>
+              <strong>Monthly Active</strong>
+            </article>
+            <article class="panel stat-card">
+              <span>Charity</span>
+              <strong>First Tee Youth Access</strong>
+            </article>
+            <article class="panel stat-card">
+              <span>Potential winnings</span>
+              <strong>$29,400</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="scores" aria-labelledby="scores-title">
+        <div class="section-heading">
+          <p class="eyebrow">Latest five</p>
+          <h2 id="scores-title">Your Scores</h2>
+        </div>
+        <div class="dashboard-grid">
+          <article class="panel">
+            <div class="score-list">
+              <div class="score-item"><strong>Apr 18, 2026</strong><span class="score-badge">12</span></div>
+              <div class="score-item"><strong>Apr 11, 2026</strong><span class="score-badge">28</span></div>
+              <div class="score-item"><strong>Apr 3, 2026</strong><span class="score-badge">7</span></div>
+              <div class="score-item"><strong>Mar 29, 2026</strong><span class="score-badge">34</span></div>
+              <div class="score-item"><strong>Mar 22, 2026</strong><span class="score-badge">19</span></div>
+            </div>
+          </article>
+          <article class="panel impact-panel" id="charity">
+            <div>
+              <p class="mini-label">Charity impact</p>
+              <h3>18% contribution selected</h3>
+            </div>
+            <div class="impact-meter" aria-label="Charity allocation">
+              <span style="--value: 18%"></span>
+            </div>
+            <p class="impact-copy">This is above the 10% minimum contribution required by the platform.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section draw-band" id="draw" aria-labelledby="draw-title">
+        <div class="section-heading">
+          <p class="eyebrow">Monthly draw</p>
+          <h2 id="draw-title">April Draw Status</h2>
+        </div>
+        <div class="dashboard-grid">
+          <article class="panel">
+            <div class="draw-numbers">
+              <span class="draw-ball">7</span>
+              <span class="draw-ball">12</span>
+              <span class="draw-ball">18</span>
+              <span class="draw-ball">28</span>
+              <span class="draw-ball">34</span>
+            </div>
+            <div class="result-line"><span>Your matching scores</span><strong>4/5</strong></div>
+            <div class="result-line"><span>Current tier</span><strong>4 match</strong></div>
+          </article>
+          <article class="panel prize-card">
+            <div class="prize-line jackpot"><span>5 match</span><strong>40%</strong></div>
+            <div class="prize-line"><span>4 match</span><strong>35%</strong></div>
+            <div class="prize-line"><span>3 match</span><strong>25%</strong></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login | GoodGolf Draw</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <main class="auth-page">
+      <a class="brand auth-brand" href="index.html" aria-label="GoodGolf Draw home">
+        <span class="brand-mark">GG</span>
+        <span>GoodGolf Draw</span>
+      </a>
+      <section class="panel auth-card" aria-labelledby="login-title">
+        <p class="eyebrow">Welcome back</p>
+        <h1 id="login-title">Login</h1>
+        <form class="form-panel" id="login-form">
+          <label>
+            Email
+            <input id="login-email" type="email" value="ava@goodgolf.test" autocomplete="email" required />
+          </label>
+          <label>
+            Password
+            <input id="login-password" type="password" value="password123" autocomplete="current-password" required />
+          </label>
+          <button class="button primary full" type="submit">Login</button>
+          <p class="form-message" id="login-message" role="status"></p>
+        </form>
+        <p class="auth-switch">New player? <a href="signup.html">Create an account</a></p>
+      </section>
+    </main>
+    <script src="auth.js"></script>
+  </body>
+</html>
